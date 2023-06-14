@@ -1,11 +1,9 @@
 FROM debian:stable-slim
-# FROM python:3.12-rc-slim
-# FROM 3162198f3b91
-# FROM gnuhealth_setup
+
 SHELL ["/bin/bash", "-c"] 
 USER root
 
-RUN sed -i 's/bullseye main/bullseye main contrib non-free/g' /etc/apt/sources.list
+#RUN sed -i 's/bullseye main/bullseye main contrib non-free/g' /etc/apt/sources.list
 RUN apt-get update 
 RUN apt install -y python3 python3-pip apt-utils gcc g++ wget patch vim nano unzip
 
